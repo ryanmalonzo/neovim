@@ -39,14 +39,14 @@ return {
     },
   },
 
-  -- mason-conform.nvim
+  -- Gitsigns
   {
-    "zapling/mason-conform.nvim",
-    dependencies = {
-      "williamboman/mason.nvim",
-      "stevearc/conform.nvim",
-    },
-    event = { "BufReadPre", "BufNewFile" },
-    opts = {},
+    "lewis6991/gitsigns.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    config = function()
+      require("gitsigns").setup {
+        current_line_blame = true,
+      }
+    end,
   },
 }
