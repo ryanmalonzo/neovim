@@ -22,8 +22,9 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
-  -- Disable dashboard
+  -- Disable default plugins
   { "goolord/alpha-nvim", enabled = false },
+  { "rcarriga/nvim-notify", enabled = false },
 
   -- Lazygit
   {
