@@ -8,4 +8,5 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.icon.mini-icons" },
   { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.pack.python" },
 }
