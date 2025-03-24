@@ -1,5 +1,9 @@
 ---@type LazySpec
 return {
+  -- Disable default plugins
+  { "goolord/alpha-nvim", enabled = false },
+  { "rcarriga/nvim-notify", enabled = false },
+
   -- Catppuccin
   {
     "catppuccin/nvim",
@@ -15,16 +19,6 @@ return {
       }
     end,
   },
-
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function() require("lsp_signature").setup() end,
-  },
-
-  -- Disable default plugins
-  { "goolord/alpha-nvim", enabled = false },
-  { "rcarriga/nvim-notify", enabled = false },
 
   -- Lazygit
   {
