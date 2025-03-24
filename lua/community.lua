@@ -4,4 +4,5 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.recipes.disable-tabline" },
   { import = "astrocommunity.completion.blink-cmp" },
+  { import = "astrocommunity.editing-support.conform-nvim" },
 }
