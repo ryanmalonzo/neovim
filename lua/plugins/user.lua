@@ -6,8 +6,8 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
-  -- You can disable default plugins as follows:
-  -- { "max397574/better-escape.nvim", enabled = false },
+  -- Disable dashboard
+  { "goolord/alpha-nvim", enabled = false },
 
   {
     "kdheepak/lazygit.nvim",
