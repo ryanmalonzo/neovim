@@ -11,4 +11,5 @@ return {
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.completion.avante-nvim" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
