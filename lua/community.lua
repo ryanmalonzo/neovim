@@ -13,4 +13,5 @@ return {
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.recipes.vscode" },
 }
