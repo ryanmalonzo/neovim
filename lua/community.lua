@@ -10,4 +10,5 @@ return {
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.completion.avante-nvim" },
 }
