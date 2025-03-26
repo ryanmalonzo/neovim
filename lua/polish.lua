@@ -1,18 +1,8 @@
-if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+local map = vim.keymap.set
 
--- This will run last in the setup process and is a good place to configure
--- things like custom filetypes. This is just pure lua so anything that doesn't
--- fit in the normal config locations above can go here
+-- general mappings
+map("n", "<C-c>", "<cmd> %y+ <CR>") -- copy whole file content
+map("n", "<C-v>", "<cmd> %d | 0put+ <CR>") -- replace whole file content with clipboard
 
--- Set up custom filetypes
-vim.filetype.add {
-  extension = {
-    foo = "fooscript",
-  },
-  filename = {
-    ["Foofile"] = "fooscript",
-  },
-  pattern = {
-    ["~/%.config/foo/.*"] = "fooscript",
-  },
-}
+-- duplicate a line and comment out the first line
+map("n", "yc", "yy<cmd>normal gcc<CR>p")
