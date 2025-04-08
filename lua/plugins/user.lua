@@ -15,6 +15,9 @@ return {
     },
   },
 
+  -- Nightfox
+  { "EdenEast/nightfox.nvim", priority = 1000 },
+
   -- Lazygit
   {
     "kdheepak/lazygit.nvim",
