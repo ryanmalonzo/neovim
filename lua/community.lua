@@ -15,4 +15,5 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.prisma" },
 }
