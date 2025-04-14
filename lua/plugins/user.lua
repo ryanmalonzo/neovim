@@ -51,8 +51,7 @@ return {
     "gbprod/cutlass.nvim",
     event = "VeryLazy",
     opts = {
-      cut_key = "x",
-      exclude = { "ns", "nS" }, -- leap.nvim
+      exclude = { "nx", "nX", "ns", "nS" }, -- normal cut + leap.nvim
     },
   },
 }
