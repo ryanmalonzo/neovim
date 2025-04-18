@@ -16,4 +16,5 @@ return {
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.prisma" },
+  { import = "astrocommunity.pack.tailwindcss" },
 }
