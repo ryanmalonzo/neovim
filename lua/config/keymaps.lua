@@ -4,6 +4,10 @@
 local map = vim.keymap.set
 local unmap = vim.keymap.del
 
+--
+-- PLUGINS
+--
+
 -- Lazygit
 if vim.fn.executable("lazygit") == 1 then
   map("n", "<leader>lg", function()
@@ -18,3 +22,16 @@ end
 
 -- oil.nvim
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+--
+-- CUSTOM
+--
+
+-- Copy whole file content
+map("n", "<C-c>", "<cmd> %y+ <CR>")
+
+-- Replace whole file content with clipboard
+map("n", "<C-v>", "<cmd> %d | 0put+ <CR>")
+
+-- Duplicate a line and comment out the first line
+map("n", "yc", "yy<cmd>normal gcc<CR>p")
