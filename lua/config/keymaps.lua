@@ -15,3 +15,6 @@ if vim.fn.executable("lazygit") == 1 then
   unmap("n", "<leader>gf")
   unmap("n", "<leader>gL")
 end
+
+-- oil.nvim
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
