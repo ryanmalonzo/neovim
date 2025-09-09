@@ -1,0 +1,17 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+local map = vim.keymap.set
+local unmap = vim.keymap.del
+
+-- Lazygit
+if vim.fn.executable("lazygit") == 1 then
+  map("n", "<leader>lg", function()
+    Snacks.lazygit({ cwd = LazyVim.root.git() })
+  end, { desc = "Lazygit (Root Dir)" })
+
+  -- LazyVim
+  unmap("n", "<leader>gG")
+  unmap("n", "<leader>gf")
+  unmap("n", "<leader>gL")
+end
