@@ -2,6 +2,7 @@ local opt = vim.opt
 
 opt.number = true
 opt.relativenumber = true
+opt.signcolumn = "yes"
 
 opt.ignorecase = true
 opt.smartcase = true
@@ -17,4 +18,15 @@ opt.mouse = "a"
 
 opt.clipboard = "unnamedplus"
 
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    source = "always",
+  },
+})
 
