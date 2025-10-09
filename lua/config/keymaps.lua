@@ -2,6 +2,9 @@ local map = vim.keymap.set
 
 map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+map({'n', 'x', 'o'}, 's', '<Plug>(leap)')
+map('n',             'S', '<Plug>(leap-from-window)')
+
 -- copy whole file content
 map("n", "<C-c>", "<cmd> %y+ <CR>")
 
