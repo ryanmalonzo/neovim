@@ -17,6 +17,7 @@ return {
       gitsigns = true,
       leap = true,
       mason = true,
+      mini = true,
       native_lsp = {
         enabled = true,
         underlines = {
