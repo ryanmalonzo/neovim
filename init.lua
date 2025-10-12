@@ -28,7 +28,7 @@ require("lazy").setup({
     { import = "plugins" },
   },
   install = { colorscheme = { "habamax" } },
-  checker = { enabled = true },
+  checker = { enabled = true, notify = false },
 })
 
 vim.cmd.colorscheme("catppuccin")
