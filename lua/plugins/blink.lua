@@ -3,6 +3,7 @@ return {
   version = '1.*',
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
+  cond = not vim.g.vscode,
   opts = {
     keymap = { preset = 'default' },
     appearance = {

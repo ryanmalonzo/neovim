@@ -4,6 +4,7 @@ return {
   lazy = false,
   build = ":TSUpdate",
   event = { "BufReadPre", "BufNewFile" },
+  cond = not vim.g.vscode,
   config = function()
     require("nvim-treesitter.configs").setup({
       ensure_installed = { "lua", "vim", "vimdoc", "markdown", "javascript", "typescript" },

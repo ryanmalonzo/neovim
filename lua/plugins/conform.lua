@@ -2,6 +2,7 @@ return {
   'stevearc/conform.nvim',
   event = { "BufWritePre" },
   cmd = { "ConformInfo" },
+  cond = not vim.g.vscode,
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
