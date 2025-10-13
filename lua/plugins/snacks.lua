@@ -6,7 +6,9 @@ return {
   ---@type snacks.Config
   opts = {
     lazygit = {},
-    picker = {},
+    picker = {
+      main = { current = true }, -- Open files in the currently focused window
+    },
   },
   keys = {
     { "<leader>lg", function() Snacks.lazygit.open() end, desc = "Open LazyGit" },
