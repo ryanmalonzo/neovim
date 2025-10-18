@@ -7,7 +7,7 @@ return {
   cond = not vim.g.vscode,
   config = function(_, opts)
     require("mason-lspconfig").setup({
-      ensure_installed = { "lua_ls", "vtsls" },
+      ensure_installed = { "biome", "lua_ls", "vtsls" },
     })
 
     vim.lsp.config("lua_ls", {
