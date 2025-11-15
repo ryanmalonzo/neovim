@@ -2,5 +2,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.colorscheme.catppuccin" }
+  { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.recipes.disable-tabline" },
 }
