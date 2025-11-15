@@ -10,4 +10,5 @@ return {
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.lsp.inc-rename-nvim" },
   { import = "astrocommunity.pack.eslint" },
+  { import = "astrocommunity.pack.prettier" },
 }
