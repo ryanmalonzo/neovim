@@ -11,4 +11,5 @@ return {
   { import = "astrocommunity.lsp.inc-rename-nvim" },
   { import = "astrocommunity.pack.eslint" },
   { import = "astrocommunity.pack.prettier" },
+  { import = "astrocommunity.pack.tailwindcss" },
 }
