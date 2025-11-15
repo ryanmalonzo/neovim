@@ -9,4 +9,5 @@ return {
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.lsp.inc-rename-nvim" },
+  { import = "astrocommunity.pack.eslint" },
 }
