@@ -6,4 +6,5 @@ return {
   { import = "astrocommunity.recipes.disable-tabline" },
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.test.neotest" },
 }
