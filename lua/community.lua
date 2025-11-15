@@ -8,4 +8,5 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.test.neotest" },
   { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.lsp.inc-rename-nvim" },
 }
