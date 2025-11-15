@@ -12,4 +12,5 @@ return {
   { import = "astrocommunity.pack.eslint" },
   { import = "astrocommunity.pack.prettier" },
   { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.completion.copilot-lua" },
 }
