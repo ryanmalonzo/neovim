@@ -7,4 +7,5 @@ return {
   { import = "astrocommunity.recipes.heirline-mode-text-statusline" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.test.neotest" },
+  { import = "astrocommunity.motion.leap-nvim" },
 }
