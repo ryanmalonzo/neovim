@@ -13,4 +13,5 @@ return {
   { import = "astrocommunity.pack.prettier" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.recipes.vscode" },
 }
