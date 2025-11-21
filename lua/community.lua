@@ -15,4 +15,5 @@ return {
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.editing-support.conform-nvim" },
   { import = "astrocommunity.file-explorer.fyler-nvim" },
+  { import = "astrocommunity.git.openingh-nvim" },
 }
