@@ -43,6 +43,7 @@ return {
           function() Snacks.lazygit.open() end,
           desc = "Open lazygit",
         },
+        ["<Leader>tl"] = false,
       },
     },
   },
