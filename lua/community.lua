@@ -14,4 +14,5 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.editing-support.conform-nvim" },
+  { import = "astrocommunity.file-explorer.fyler-nvim" },
 }
