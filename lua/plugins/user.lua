@@ -1,24 +1,18 @@
+---@type LazySpec
 return {
-  {
-    "AstroNvim/astrolsp",
-    opts = {
-      config = {
-        vtsls = {
-          settings = {
-            typescript = {
-              tsserver = {
-                maxTsServerMemory = 8192,
-              },
-            },
-          },
-        },
-      },
-    },
-  },
   {
     "catppuccin/nvim",
     opts = {
       transparent_background = true,
+    },
+  },
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "stylua",
+      },
     },
   },
 }
