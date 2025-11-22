@@ -16,7 +16,7 @@ return {
         number = true,
         spell = false,
         signcolumn = "yes",
-        wrap = true,
+        wrap = false,
       },
       g = {},
     },
