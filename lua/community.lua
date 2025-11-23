@@ -17,4 +17,5 @@ return {
   { import = "astrocommunity.file-explorer.fyler-nvim" },
   { import = "astrocommunity.git.openingh-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.pack.go" },
 }
