@@ -19,4 +19,5 @@ return {
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.nix" },
+  { import = "astrocommunity.git.diffview-nvim" },
 }
