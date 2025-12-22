@@ -11,7 +11,7 @@ return {
   { import = "astrocommunity.pack.eslint" },
   { import = "astrocommunity.pack.prettier" },
   { import = "astrocommunity.pack.tailwindcss" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.completion.copilot-lua-cmp", enabled = false },
   { import = "astrocommunity.recipes.vscode" },
   { import = "astrocommunity.editing-support.conform-nvim" },
   { import = "astrocommunity.file-explorer.fyler-nvim" },
