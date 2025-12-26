@@ -39,11 +39,15 @@ return {
         ["<Leader>b"] = { desc = "Buffers" },
 
         -- lazygit
+        ["<Leader>tl"] = false,
         ["<Leader>lg"] = {
           function() Snacks.lazygit.open() end,
           desc = "Open lazygit",
         },
-        ["<Leader>tl"] = false,
+
+        -- oil.nvim
+        ["<Leader>O"] = false,
+        ["-"] = { function() require("oil").open() end, desc = "Open folder in Oil" },
       },
     },
   },
