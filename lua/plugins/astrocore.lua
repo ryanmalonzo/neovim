@@ -38,6 +38,16 @@ return {
 
         ["<Leader>b"] = { desc = "Buffers" },
 
+        -- copy relative path
+        ["<Leader>fy"] = {
+          function()
+            local path = vim.fn.expand "%:."
+            vim.fn.setreg("+", path)
+            vim.notify("Copied: " .. path, vim.log.levels.INFO)
+          end,
+          desc = "Copy relative path",
+        },
+
         -- lazygit
         ["<Leader>tl"] = false,
         ["<Leader>lg"] = {
