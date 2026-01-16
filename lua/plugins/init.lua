@@ -24,7 +24,52 @@ require("zpack").setup({
   },
 
   {
+    "mason-org/mason.nvim",
+    lazy = false,
+    config = function()
+      require("mason").setup()
+    end,
+  },
+
+  {
+    "mason-org/mason-lspconfig.nvim",
+    dependencies = { "mason-org/mason.nvim" },
+    lazy = false,
+    config = function()
+      require("mason-lspconfig").setup({
+        automatic_enable = true,
+      })
+    end,
+  },
+
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = { "mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim" },
+    lazy = false,
+    config = function()
+      require("mason-tool-installer").setup({
+        ensure_installed = {
+          "lua_ls",
+          "vtsls",
+          "prettierd",
+          "eslint_d",
+          "stylua",
+        },
+        run_on_start = true,
+        integrations = {
+          ["mason-lspconfig"] = true,
+        },
+      })
+    end,
+  },
+
+  {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "mason-org/mason.nvim",
+      "mason-org/mason-lspconfig.nvim",
+      "WhoIsSethDaniel/mason-tool-installer.nvim",
+    },
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("plugins.lsp")

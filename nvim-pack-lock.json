@@ -33,6 +33,18 @@
       "rev": "59fd447a103ab078969c81e8586a2241e29ccfea",
       "src": "https://codeberg.org/andyg/leap.nvim"
     },
+    "mason-lspconfig.nvim": {
+      "rev": "80c0130c5f16b551865a69e832f1feadeedb5fbe",
+      "src": "https://github.com/mason-org/mason-lspconfig.nvim"
+    },
+    "mason-tool-installer.nvim": {
+      "rev": "517ef5994ef9d6b738322664d5fdd948f0fdeb46",
+      "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
+    },
+    "mason.nvim": {
+      "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
     "mini.icons": {
       "rev": "efc85e42262cd0c9e1fdbf806c25cb0be6de115c",
       "src": "https://github.com/echasnovski/mini.icons"

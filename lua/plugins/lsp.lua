@@ -19,8 +19,6 @@ vim.lsp.config("lua_ls", {
     },
 })
 
-vim.lsp.enable("lua_ls")
-
 vim.lsp.config("vtsls", {
     settings = {
         typescript = {
@@ -30,5 +28,3 @@ vim.lsp.config("vtsls", {
         },
     },
 })
-
-vim.lsp.enable("vtsls")
