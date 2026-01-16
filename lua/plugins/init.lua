@@ -25,7 +25,6 @@ require("zpack").setup({
 
   {
     "mason-org/mason.nvim",
-    lazy = false,
     config = function()
       require("mason").setup()
     end,
@@ -34,7 +33,6 @@ require("zpack").setup({
   {
     "mason-org/mason-lspconfig.nvim",
     dependencies = { "mason-org/mason.nvim" },
-    lazy = false,
     config = function()
       require("mason-lspconfig").setup({
         automatic_enable = true,
@@ -45,7 +43,6 @@ require("zpack").setup({
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     dependencies = { "mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim" },
-    lazy = false,
     config = function()
       require("mason-tool-installer").setup({
         ensure_installed = {
@@ -187,7 +184,7 @@ require("zpack").setup({
 
   {
     "stevearc/conform.nvim",
-    event = { "BufReadPre", "BufNewFile" },
+    event = "BufWritePre",
     config = function()
       require("conform").setup({
         formatters_by_ft = {
