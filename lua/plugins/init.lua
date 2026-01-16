@@ -19,4 +19,12 @@ require("zpack").setup({
             require("nvim-treesitter").install({ "lua", "vim", "vimdoc", "markdown", "markdown_inline" })
         end,
     },
+
+    {
+        "neovim/nvim-lspconfig",
+        event = { "BufReadPre", "BufNewFile" },
+        config = function()
+            require("plugins.lsp")
+        end,
+    },
 })
