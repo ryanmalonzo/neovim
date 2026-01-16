@@ -139,4 +139,23 @@ require("zpack").setup({
       })
     end,
   },
+
+  {
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    config = function()
+      require("conform").setup({
+        formatters_by_ft = {
+          javascript = { "prettierd", "eslint_d" },
+          javascriptreact = { "prettierd", "eslint_d" },
+          typescript = { "prettierd", "eslint_d" },
+          typescriptreact = { "prettierd", "eslint_d" },
+        },
+        format_on_save = {
+          timeout_ms = 500,
+          lsp_format = "fallback",
+        },
+      })
+    end,
+  },
 })
