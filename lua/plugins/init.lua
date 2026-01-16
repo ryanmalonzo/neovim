@@ -150,6 +150,7 @@ require("zpack").setup({
           javascriptreact = { "prettierd", "eslint_d" },
           typescript = { "prettierd", "eslint_d" },
           typescriptreact = { "prettierd", "eslint_d" },
+          lua = { "stylua" },
         },
         format_on_save = {
           timeout_ms = 500,
