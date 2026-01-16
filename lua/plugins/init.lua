@@ -104,4 +104,25 @@ require("zpack").setup({
       })
     end,
   },
+
+  {
+    "stevearc/oil.nvim",
+    dependencies = { "echasnovski/mini.icons" },
+    lazy = false,
+    keys = {
+      { "-", "<cmd>Oil<cr>", desc = "Open parent directory" },
+    },
+    config = function()
+      require("mini.icons").setup()
+      require("oil").setup({
+        default_file_explorer = true,
+        icons = {
+          provider = "mini.icons",
+        },
+        view_options = {
+          show_hidden = false,
+        },
+      })
+    end,
+  },
 })
