@@ -10,4 +10,13 @@ require("zpack").setup({
             vim.cmd.colorscheme("catppuccin")
         end,
     },
+
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function()
+            require("nvim-treesitter").setup({})
+            require("nvim-treesitter").install({ "lua", "vim", "vimdoc", "markdown", "markdown_inline" })
+        end,
+    },
 })

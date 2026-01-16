@@ -4,6 +4,10 @@
       "rev": "beaf41a30c26fd7d6c386d383155cbd65dd554cd",
       "src": "https://github.com/catppuccin/nvim"
     },
+    "nvim-treesitter": {
+      "rev": "8aada0e3940c573e38b417a226b43bc8675f8958",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
     "zpack.nvim": {
       "rev": "1cf8b96595408d9fb5f645f8f3b3c822b0dbea03",
       "src": "https://github.com/zuqini/zpack.nvim"
