@@ -1,3 +1,8 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
+
+require("plugins")
+
 vim.opt.number = true
 
 vim.opt.ignorecase = true
