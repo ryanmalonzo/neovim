@@ -106,6 +106,17 @@ require("zpack").setup({
   },
 
   {
+    url = "https://codeberg.org/andyg/leap.nvim",
+    keys = {
+      { "s", "<Plug>(leap-forward)", mode = { "n", "x", "o" }, desc = "Leap forward" },
+      { "S", "<Plug>(leap-backward)", mode = { "n", "x", "o" }, desc = "Leap backward" },
+    },
+    config = function()
+      require("leap").setup({})
+    end,
+  },
+
+  {
     "stevearc/oil.nvim",
     dependencies = { "echasnovski/mini.icons" },
     lazy = false,

@@ -25,6 +25,10 @@
       "rev": "84a4987ff36798c2fc1169cbaff67960aed9776f",
       "src": "https://github.com/NMAC427/guess-indent.nvim"
     },
+    "leap.nvim": {
+      "rev": "59fd447a103ab078969c81e8586a2241e29ccfea",
+      "src": "https://codeberg.org/andyg/leap.nvim"
+    },
     "mini.icons": {
       "rev": "efc85e42262cd0c9e1fdbf806c25cb0be6de115c",
       "src": "https://github.com/echasnovski/mini.icons"
