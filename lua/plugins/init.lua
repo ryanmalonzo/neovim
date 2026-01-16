@@ -82,5 +82,26 @@ require("zpack").setup({
     config = function()
       require("guess-indent").setup()
     end,
-  }
+  },
+
+  {
+    "saghen/blink.cmp",
+    sem_version = "1.*",
+    dependencies = { "rafamadriz/friendly-snippets" },
+    event = { "InsertEnter", "CmdlineEnter" },
+    config = function()
+      require("blink.cmp").setup({
+        keymap = { preset = "default" },
+        completion = {
+          documentation = {
+            auto_show = true,
+            auto_show_delay_ms = 500,
+          },
+        },
+        sources = {
+          default = { "lsp", "path", "snippets", "buffer" },
+        },
+      })
+    end,
+  },
 })
