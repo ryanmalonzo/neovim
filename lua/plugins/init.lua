@@ -1,4 +1,9 @@
-vim.pack.add({ "https://github.com/zuqini/zpack.nvim" })
+vim.pack.add({
+  {
+    src = "https://github.com/zuqini/zpack.nvim",
+    version = "1cf8b96595408d9fb5f645f8f3b3c822b0dbea03",
+  },
+})
 
 require("zpack").setup({
   {
