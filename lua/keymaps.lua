@@ -4,6 +4,9 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to bottom split" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to top split" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right split" })
 
+-- Diagnostics
+vim.keymap.set("n", "<leader>xx", vim.diagnostic.setloclist, { desc = "Diagnostics loclist" })
+
 -- Copy relative path
 vim.keymap.set("n", "<Leader>fy", function()
   local path = vim.fn.expand("%:.")
