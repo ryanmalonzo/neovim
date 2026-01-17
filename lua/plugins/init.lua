@@ -6,6 +6,7 @@ require("zpack").setup({
     name = "catppuccin",
     sem_version = "~1.11.0",
     priority = 1000,
+    cond = not vim.g.vscode,
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
@@ -31,6 +32,7 @@ require("zpack").setup({
     sem_version = "~2.30.0",
     priority = 1000,
     lazy = false,
+    cond = not vim.g.vscode,
     keys = {
       {
         "<leader>lg",
@@ -71,6 +73,7 @@ require("zpack").setup({
     "nvim-treesitter/nvim-treesitter",
     sem_version = "~0.10.0",
     build = ":TSUpdate",
+    cond = not vim.g.vscode,
     config = function()
       require("nvim-treesitter").setup({})
       require("nvim-treesitter").install({ "lua", "vim", "vimdoc", "markdown", "markdown_inline" })
@@ -80,6 +83,7 @@ require("zpack").setup({
   {
     "mason-org/mason.nvim",
     sem_version = "~2.2.1",
+    cond = not vim.g.vscode,
     config = function()
       require("mason").setup()
     end,
@@ -89,6 +93,7 @@ require("zpack").setup({
     "mason-org/mason-lspconfig.nvim",
     sem_version = "~2.1.0",
     dependencies = { "mason-org/mason.nvim" },
+    cond = not vim.g.vscode,
     config = function()
       require("mason-lspconfig").setup({
         automatic_enable = true,
@@ -100,6 +105,7 @@ require("zpack").setup({
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     commit = "517ef5994ef9d6b738322664d5fdd948f0fdeb46",
     dependencies = { "mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim" },
+    cond = not vim.g.vscode,
     config = function()
       require("mason-tool-installer").setup({
         ensure_installed = {
@@ -126,6 +132,7 @@ require("zpack").setup({
       "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
     event = { "BufReadPre", "BufNewFile" },
+    cond = not vim.g.vscode,
     config = function()
       require("plugins.lsp")
     end,
@@ -136,6 +143,7 @@ require("zpack").setup({
     sem_version = "~0.2.1",
     cmd = "Telescope",
     dependencies = { "nvim-lua/plenary.nvim" },
+    cond = not vim.g.vscode,
     keys = {
       { "<leader>ff", "<cmd>Telescope find_files<cr>" },
       { "<leader>fw", "<cmd>Telescope live_grep<cr>" },
@@ -148,6 +156,7 @@ require("zpack").setup({
     "lewis6991/gitsigns.nvim",
     sem_version = "~2.0.0",
     event = { "BufReadPre", "BufNewFile" },
+    cond = not vim.g.vscode,
     config = function()
       require("gitsigns").setup({
         on_attach = function(bufnr)
@@ -166,6 +175,7 @@ require("zpack").setup({
     "windwp/nvim-autopairs",
     commit = "c2a0dd0d931d0fb07665e1fedb1ea688da3b80b4",
     event = "InsertEnter",
+    cond = not vim.g.vscode,
     config = function()
       require("nvim-autopairs").setup()
     end,
@@ -187,6 +197,7 @@ require("zpack").setup({
     "NMAC427/guess-indent.nvim",
     commit = "84a4987ff36798c2fc1169cbaff67960aed9776f",
     event = { "BufReadPost", "BufNewFile" },
+    cond = not vim.g.vscode,
     config = function()
       require("guess-indent").setup()
     end,
@@ -197,6 +208,7 @@ require("zpack").setup({
     sem_version = "~1.8.0",
     dependencies = { "rafamadriz/friendly-snippets" },
     event = { "InsertEnter", "CmdlineEnter" },
+    cond = not vim.g.vscode,
     config = function()
       require("blink.cmp").setup({
         keymap = { preset = "default" },
@@ -229,6 +241,7 @@ require("zpack").setup({
     sem_version = "~2.15.0",
     dependencies = { "echasnovski/mini.icons" },
     lazy = false,
+    cond = not vim.g.vscode,
     keys = {
       { "-", "<cmd>Oil<cr>", desc = "Open parent directory" },
     },
@@ -265,6 +278,7 @@ require("zpack").setup({
     "stevearc/conform.nvim",
     sem_version = "~9.1.0",
     event = "BufWritePre",
+    cond = not vim.g.vscode,
     config = function()
       require("conform").setup({
         formatters_by_ft = {
@@ -295,6 +309,7 @@ require("zpack").setup({
     "kylechui/nvim-surround",
     sem_version = "~3.1.8",
     event = "VeryLazy",
+    cond = not vim.g.vscode,
     config = function()
       require("nvim-surround").setup({
         -- Default keymaps:
