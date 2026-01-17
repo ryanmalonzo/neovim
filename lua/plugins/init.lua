@@ -267,4 +267,12 @@ require("zpack").setup({
       })
     end,
   },
+
+  {
+    "Almo7aya/openingh.nvim",
+    keys = {
+      { "<leader>gh", "<cmd>OpenInGHFile<cr>", desc = "Open file in GitHub" },
+      { "<leader>gh", ":OpenInGHFileLines<CR>", mode = "v", desc = "Open file with lines in GitHub" },
+    },
+  },
 })
