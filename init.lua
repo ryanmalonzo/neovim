@@ -39,3 +39,5 @@ end)
 
 vim.opt.mouse = "a"
 vim.opt.showmode = false
+
+vim.o.inccommand = "split"
