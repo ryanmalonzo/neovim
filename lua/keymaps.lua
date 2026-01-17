@@ -7,6 +7,16 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right split" })
 -- Diagnostics
 vim.keymap.set("n", "<leader>xx", vim.diagnostic.setloclist, { desc = "Diagnostics loclist" })
 
+-- Auto-refresh location list when diagnostics change
+vim.api.nvim_create_autocmd("DiagnosticChanged", {
+  callback = function()
+    -- Only update if location list is currently open
+    if vim.fn.getloclist(0, { winid = 0 }).winid ~= 0 then
+      vim.diagnostic.setloclist({ open = false })
+    end
+  end,
+})
+
 -- Copy relative path
 vim.keymap.set("n", "<Leader>fy", function()
   local path = vim.fn.expand("%:.")
