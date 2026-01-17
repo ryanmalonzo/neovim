@@ -9,6 +9,17 @@ require("zpack").setup({
       require("catppuccin").setup({
         flavour = "mocha",
         transparent_background = true,
+        float = {
+          transparent = true,
+        },
+        integrations = {
+          telescope = {
+            enabled = true,
+          },
+          gitsigns = true,
+          mason = true,
+          treesitter = true,
+        },
       })
       vim.cmd.colorscheme("catppuccin")
     end,
