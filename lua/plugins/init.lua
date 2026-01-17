@@ -15,6 +15,46 @@ require("zpack").setup({
   },
 
   {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    keys = {
+      {
+        "<leader>lg",
+        function()
+          Snacks.lazygit()
+        end,
+        desc = "Lazygit",
+      },
+      {
+        "<leader>gp",
+        function()
+          Snacks.picker.gh_pr({ state = "all" })
+        end,
+        desc = "GitHub PRs (all)",
+      },
+    },
+    config = function()
+      require("snacks").setup({
+        lazygit = { enabled = true },
+        picker = { enabled = true },
+        rename = { enabled = true },
+        bigfile = { enabled = false },
+        dashboard = { enabled = false },
+        explorer = { enabled = false },
+        indent = { enabled = false },
+        input = { enabled = false },
+        notifier = { enabled = false },
+        quickfile = { enabled = false },
+        scope = { enabled = false },
+        scroll = { enabled = false },
+        statuscolumn = { enabled = false },
+        words = { enabled = false }
+      })
+    end,
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
@@ -178,6 +218,21 @@ require("zpack").setup({
         view_options = {
           show_hidden = false,
         },
+      })
+
+      -- Integrate with snacks.nvim rename feature
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "OilActionsPost",
+        callback = function(event)
+          if event.data.err then
+            return
+          end
+          for _, action in ipairs(event.data.actions) do
+            if action.type == "move" then
+              Snacks.rename.on_rename_file(action.src_url, action.dest_url)
+            end
+          end
+        end,
       })
     end,
   },
