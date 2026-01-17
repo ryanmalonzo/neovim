@@ -37,7 +37,8 @@
     },
     "leap.nvim": {
       "rev": "59fd447a103ab078969c81e8586a2241e29ccfea",
-      "src": "https://codeberg.org/andyg/leap.nvim"
+      "src": "https://codeberg.org/andyg/leap.nvim",
+      "version": "'59fd447a103ab078969c81e8586a2241e29ccfea'"
     },
     "mason-lspconfig.nvim": {
       "rev": "80c0130c5f16b551865a69e832f1feadeedb5fbe",
@@ -62,7 +63,7 @@
     "nvim-autopairs": {
       "rev": "c2a0dd0d931d0fb07665e1fedb1ea688da3b80b4",
       "src": "https://github.com/windwp/nvim-autopairs",
-      "version": "'c2a0dd0d931d0fb07665e1fedb1ea688da3b80b4'"
+      "version": "'0.10.0'"
     },
     "nvim-lspconfig": {
       "rev": "92ee7d42320edfbb81f3cad851314ab197fa324a",

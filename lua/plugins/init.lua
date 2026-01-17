@@ -178,7 +178,7 @@ require("zpack").setup({
 
   {
     "windwp/nvim-autopairs",
-    commit = "c2a0dd0d931d0fb07665e1fedb1ea688da3b80b4",
+    version = "0.10.0",
     event = "InsertEnter",
     cond = not vim.g.vscode,
     config = function()
@@ -232,6 +232,7 @@ require("zpack").setup({
 
   {
     url = "https://codeberg.org/andyg/leap.nvim",
+    commit = "59fd447a103ab078969c81e8586a2241e29ccfea",
     keys = {
       { "s", "<Plug>(leap-forward)", mode = { "n", "x", "o" }, desc = "Leap forward" },
       { "S", "<Plug>(leap-backward)", mode = { "n", "x", "o" }, desc = "Leap backward" },
@@ -262,7 +263,7 @@ require("zpack").setup({
         },
       })
 
-      -- Integrate with snacks.nvim rename feature
+      -- Integrate with snacks.nvim rename
       vim.api.nvim_create_autocmd("User", {
         pattern = "OilActionsPost",
         callback = function(event)
