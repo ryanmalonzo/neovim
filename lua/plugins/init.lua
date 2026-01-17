@@ -283,7 +283,7 @@ require("zpack").setup({
   {
     "stevearc/conform.nvim",
     sem_version = "~9.1.0",
-    event = "BufWritePre",
+    event = { "BufReadPre", "BufNewFile" },
     cond = not vim.g.vscode,
     config = function()
       require("conform").setup({
