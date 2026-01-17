@@ -147,7 +147,7 @@ require("zpack").setup({
     "nvim-telescope/telescope.nvim",
     sem_version = "~0.2.1",
     cmd = "Telescope",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { { "nvim-lua/plenary.nvim", version = "v0.1.4" } },
     cond = not vim.g.vscode,
     keys = {
       { "<leader>ff", "<cmd>Telescope find_files<cr>" },
@@ -211,7 +211,7 @@ require("zpack").setup({
   {
     "saghen/blink.cmp",
     sem_version = "~1.8.0",
-    dependencies = { "rafamadriz/friendly-snippets" },
+    dependencies = { { "rafamadriz/friendly-snippets", version = "572f5660cf05f8cd8834e096d7b4c921ba18e175" } },
     event = { "InsertEnter", "CmdlineEnter" },
     cond = not vim.g.vscode,
     config = function()
@@ -244,7 +244,7 @@ require("zpack").setup({
   {
     "stevearc/oil.nvim",
     sem_version = "~2.15.0",
-    dependencies = { "echasnovski/mini.icons" },
+    dependencies = { { "nvim-mini/mini.icons", version = "v0.17.0" } },
     lazy = false,
     cond = not vim.g.vscode,
     keys = {
