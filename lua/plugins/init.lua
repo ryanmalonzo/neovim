@@ -60,7 +60,7 @@ require("zpack").setup({
         scope = { enabled = false },
         scroll = { enabled = false },
         statuscolumn = { enabled = false },
-        words = { enabled = false }
+        words = { enabled = false },
       })
     end,
   },
@@ -274,5 +274,22 @@ require("zpack").setup({
       { "<leader>gh", "<cmd>OpenInGHFile<cr>", desc = "Open file in GitHub" },
       { "<leader>gh", ":OpenInGHFileLines<CR>", mode = "v", desc = "Open file with lines in GitHub" },
     },
+  },
+
+  {
+    "kylechui/nvim-surround",
+    sem_version = "3.1.8",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Default keymaps:
+        -- Normal mode:
+        --   ys{motion}{char} - Add surround
+        --   ds{char}         - Delete surround
+        --   cs{old}{new}     - Change surround
+        -- Visual mode:
+        --   S{char}          - Add surround
+      })
+    end,
   },
 })
