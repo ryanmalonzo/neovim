@@ -33,7 +33,9 @@ vim.opt.swapfile = false
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
-vim.opt.clipboard = "unnamedplus"
+vim.schedule(function()
+  vim.opt.clipboard = "unnamedplus"
+end)
 
 vim.opt.mouse = "a"
 vim.opt.showmode = false
