@@ -294,6 +294,22 @@ require("zpack").setup({
           typescriptreact = { "prettierd", "eslint_d" },
           lua = { "stylua" },
         },
+        formatters = {
+          eslint_d = {
+            cwd = require("conform.util").root_file({
+              ".eslintrc",
+              ".eslintrc.js",
+              ".eslintrc.cjs",
+              ".eslintrc.yaml",
+              ".eslintrc.yml",
+              ".eslintrc.json",
+              "eslint.config.js",
+              "eslint.config.mjs",
+              "eslint.config.cjs",
+            }),
+            require_cwd = true,
+          },
+        },
         format_on_save = {
           timeout_ms = 500,
           lsp_format = "fallback",
