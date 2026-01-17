@@ -4,6 +4,7 @@ require("zpack").setup({
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    sem_version = "~1.11.0",
     priority = 1000,
     config = function()
       require("catppuccin").setup({
@@ -27,6 +28,7 @@ require("zpack").setup({
 
   {
     "folke/snacks.nvim",
+    sem_version = "~2.30.0",
     priority = 1000,
     lazy = false,
     keys = {
@@ -67,6 +69,7 @@ require("zpack").setup({
 
   {
     "nvim-treesitter/nvim-treesitter",
+    sem_version = "~0.10.0",
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter").setup({})
@@ -76,6 +79,7 @@ require("zpack").setup({
 
   {
     "mason-org/mason.nvim",
+    sem_version = "~2.2.1",
     config = function()
       require("mason").setup()
     end,
@@ -83,6 +87,7 @@ require("zpack").setup({
 
   {
     "mason-org/mason-lspconfig.nvim",
+    sem_version = "~2.1.0",
     dependencies = { "mason-org/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
@@ -93,6 +98,7 @@ require("zpack").setup({
 
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
+    commit = "517ef5994ef9d6b738322664d5fdd948f0fdeb46",
     dependencies = { "mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim" },
     config = function()
       require("mason-tool-installer").setup({
@@ -113,6 +119,7 @@ require("zpack").setup({
 
   {
     "neovim/nvim-lspconfig",
+    sem_version = "~2.5.0",
     dependencies = {
       "mason-org/mason.nvim",
       "mason-org/mason-lspconfig.nvim",
@@ -126,6 +133,7 @@ require("zpack").setup({
 
   {
     "nvim-telescope/telescope.nvim",
+    sem_version = "~0.2.1",
     cmd = "Telescope",
     dependencies = { "nvim-lua/plenary.nvim" },
     keys = {
@@ -138,6 +146,7 @@ require("zpack").setup({
 
   {
     "lewis6991/gitsigns.nvim",
+    sem_version = "~2.0.0",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("gitsigns").setup({
@@ -155,6 +164,7 @@ require("zpack").setup({
 
   {
     "windwp/nvim-autopairs",
+    commit = "c2a0dd0d931d0fb07665e1fedb1ea688da3b80b4",
     event = "InsertEnter",
     config = function()
       require("nvim-autopairs").setup()
@@ -163,6 +173,7 @@ require("zpack").setup({
 
   {
     "numToStr/Comment.nvim",
+    sem_version = "~0.8.0",
     keys = {
       { "gc", mode = { "n", "v" } },
       { "gcc", mode = "n" },
@@ -174,6 +185,7 @@ require("zpack").setup({
 
   {
     "NMAC427/guess-indent.nvim",
+    commit = "84a4987ff36798c2fc1169cbaff67960aed9776f",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
       require("guess-indent").setup()
@@ -182,7 +194,7 @@ require("zpack").setup({
 
   {
     "saghen/blink.cmp",
-    sem_version = "1.*",
+    sem_version = "~1.8.0",
     dependencies = { "rafamadriz/friendly-snippets" },
     event = { "InsertEnter", "CmdlineEnter" },
     config = function()
@@ -214,6 +226,7 @@ require("zpack").setup({
 
   {
     "stevearc/oil.nvim",
+    sem_version = "~2.15.0",
     dependencies = { "echasnovski/mini.icons" },
     lazy = false,
     keys = {
@@ -250,6 +263,7 @@ require("zpack").setup({
 
   {
     "stevearc/conform.nvim",
+    sem_version = "~9.1.0",
     event = "BufWritePre",
     config = function()
       require("conform").setup({
@@ -270,6 +284,7 @@ require("zpack").setup({
 
   {
     "Almo7aya/openingh.nvim",
+    sem_version = "~1.0.14",
     keys = {
       { "<leader>gh", "<cmd>OpenInGHFile<cr>", desc = "Open file in GitHub" },
       { "<leader>gh", ":OpenInGHFileLines<CR>", mode = "v", desc = "Open file with lines in GitHub" },
@@ -278,7 +293,7 @@ require("zpack").setup({
 
   {
     "kylechui/nvim-surround",
-    sem_version = "3.1.8",
+    sem_version = "~3.1.8",
     event = "VeryLazy",
     config = function()
       require("nvim-surround").setup({
