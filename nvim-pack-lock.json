@@ -105,6 +105,11 @@
       "src": "https://github.com/nvim-telescope/telescope.nvim",
       "version": "0.2.1 - 0.3.0"
     },
+    "tiny-inline-diagnostic.nvim": {
+      "rev": "ecce93ff7db4461e942c03e0fcc64bd785df4057",
+      "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim",
+      "version": "'ecce93ff7db4461e942c03e0fcc64bd785df4057'"
+    },
     "zpack.nvim": {
       "rev": "1cf8b96595408d9fb5f645f8f3b3c822b0dbea03",
       "src": "https://github.com/zuqini/zpack.nvim",
