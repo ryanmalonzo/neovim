@@ -115,6 +115,7 @@ require("zpack").setup({
       require("mason-tool-installer").setup({
         ensure_installed = {
           "biome",
+          "eslint",
           "eslint_d",
           "lua_ls",
           "prettierd",
