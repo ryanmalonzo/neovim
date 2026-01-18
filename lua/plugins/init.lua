@@ -114,11 +114,12 @@ require("zpack").setup({
     config = function()
       require("mason-tool-installer").setup({
         ensure_installed = {
-          "lua_ls",
-          "vtsls",
-          "prettierd",
+          "biome",
           "eslint_d",
+          "lua_ls",
+          "prettierd",
           "stylua",
+          "vtsls",
         },
         run_on_start = true,
         integrations = {
@@ -286,15 +287,48 @@ require("zpack").setup({
     event = { "BufReadPre", "BufNewFile" },
     cond = not vim.g.vscode,
     config = function()
-      require("conform").setup({
+      local conform = require("conform")
+
+      conform.setup({
         formatters_by_ft = {
-          javascript = { "prettierd", "eslint_d" },
-          javascriptreact = { "prettierd", "eslint_d" },
-          typescript = { "prettierd", "eslint_d" },
-          typescriptreact = { "prettierd", "eslint_d" },
+          javascript = function(bufnr)
+            if conform.get_formatter_info("biome", bufnr).available then
+              return { "biome" }
+            else
+              return { "prettierd", "eslint_d" }
+            end
+          end,
+          javascriptreact = function(bufnr)
+            if conform.get_formatter_info("biome", bufnr).available then
+              return { "biome" }
+            else
+              return { "prettierd", "eslint_d" }
+            end
+          end,
+          typescript = function(bufnr)
+            if conform.get_formatter_info("biome", bufnr).available then
+              return { "biome" }
+            else
+              return { "prettierd", "eslint_d" }
+            end
+          end,
+          typescriptreact = function(bufnr)
+            if conform.get_formatter_info("biome", bufnr).available then
+              return { "biome" }
+            else
+              return { "prettierd", "eslint_d" }
+            end
+          end,
           lua = { "stylua" },
         },
         formatters = {
+          biome = {
+            cwd = require("conform.util").root_file({
+              "biome.json",
+              "biome.jsonc",
+            }),
+            require_cwd = true,
+          },
           eslint_d = {
             cwd = require("conform.util").root_file({
               ".eslintrc",
