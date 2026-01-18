@@ -1,5 +1,7 @@
 # neovim
 
+![neovim.png](./docs/neovim.png)
+
 - Neovim 0.12+ (Nightly) required
   - Leverages built-in [vim.pack](https://neovim.io/doc/user/pack.html) package manager with [zpack.nvim](https://github.com/zuqini/zpack.nvim)
 - ≤ 40ms startup time thanks to lazy-loading
