@@ -14,8 +14,8 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 vim.opt.smartindent = true
 
 vim.opt.termguicolors = true
@@ -34,7 +34,7 @@ vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
 vim.schedule(function()
-  vim.opt.clipboard = "unnamedplus"
+	vim.opt.clipboard = "unnamedplus"
 end)
 
 vim.opt.mouse = "a"
