@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("DiagnosticChanged", {
 })
 
 -- Copy relative path
-vim.keymap.set("n", "<Leader>fy", function()
+vim.keymap.set("n", "<Leader>cr", function()
   local path = vim.fn.expand("%:.")
   vim.fn.setreg("+", path)
   vim.notify("Copied: " .. path, vim.log.levels.INFO)
