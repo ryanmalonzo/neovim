@@ -80,8 +80,31 @@ require("zpack").setup({
     build = ":TSUpdate",
     cond = not vim.g.vscode,
     config = function()
+      local parsers = {
+        "lua",
+        "prisma",
+        "vim",
+        "vimdoc",
+        "markdown",
+        "markdown_inline",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        "html",
+        "css",
+      }
+
       require("nvim-treesitter").setup({})
-      require("nvim-treesitter").install({ "lua", "vim", "vimdoc", "markdown", "markdown_inline" })
+      require("nvim-treesitter").install(parsers)
+
+      -- Enable highlighting via autocmd (new API)
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "lua", "prisma", "vim", "markdown", "javascript", "typescript", "typescriptreact", "javascriptreact", "json", "html", "css" },
+        callback = function()
+          vim.treesitter.start()
+        end,
+      })
     end,
   },
 
@@ -119,7 +142,7 @@ require("zpack").setup({
           "eslint_d",
           "lua_ls",
           "prettierd",
-          "prismals",
+          "prisma-language-server",
           "stylua",
           "vtsls",
         },
