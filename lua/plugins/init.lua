@@ -119,6 +119,7 @@ require("zpack").setup({
           "eslint_d",
           "lua_ls",
           "prettierd",
+          "prismals",
           "stylua",
           "vtsls",
         },
