@@ -80,6 +80,11 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "0.10.0 - 0.11.0"
     },
+    "nvim-treesitter-context": {
+      "rev": "ed1cf48d5af252248c55f50b9427e8ce883a2c6b",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-context",
+      "version": "1.0.0 - 1.1.0"
+    },
     "oil.nvim": {
       "rev": "6b59a6cf623fa2245c7454ddb458df5bdb6615d3",
       "src": "https://github.com/stevearc/oil.nvim",

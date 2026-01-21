@@ -100,11 +100,33 @@ require("zpack").setup({
 
       -- Enable highlighting via autocmd (new API)
       vim.api.nvim_create_autocmd("FileType", {
-        pattern = { "lua", "prisma", "vim", "markdown", "javascript", "typescript", "typescriptreact", "javascriptreact", "json", "html", "css" },
+        pattern = {
+          "lua",
+          "prisma",
+          "vim",
+          "markdown",
+          "javascript",
+          "typescript",
+          "typescriptreact",
+          "javascriptreact",
+          "json",
+          "html",
+          "css",
+        },
         callback = function()
           vim.treesitter.start()
         end,
       })
+    end,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    sem_version = "~1.0.0",
+    cond = not vim.g.vscode,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("treesitter-context").setup()
     end,
   },
 
