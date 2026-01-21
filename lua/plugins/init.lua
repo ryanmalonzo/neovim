@@ -121,6 +121,16 @@ require("zpack").setup({
   },
 
   {
+    "nvim-treesitter/nvim-treesitter-context",
+    sem_version = "~1.0.0",
+    cond = not vim.g.vscode,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("treesitter-context").setup()
+    end,
+  },
+
+  {
     "mason-org/mason.nvim",
     sem_version = "~2.2.1",
     cond = not vim.g.vscode,
