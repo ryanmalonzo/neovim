@@ -168,6 +168,7 @@ require("zpack").setup({
           "stylua",
           "vtsls",
           "nil_ls",
+          "terraformls",
         },
         run_on_start = true,
         integrations = {
