@@ -167,6 +167,7 @@ require("zpack").setup({
           "prisma-language-server",
           "stylua",
           "vtsls",
+          "nil_ls",
         },
         run_on_start = true,
         integrations = {
