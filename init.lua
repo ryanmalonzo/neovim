@@ -34,10 +34,12 @@ vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
 vim.schedule(function()
-	vim.opt.clipboard = "unnamedplus"
+  vim.opt.clipboard = "unnamedplus"
 end)
 
 vim.opt.mouse = "a"
 vim.opt.showmode = false
 
 vim.o.inccommand = "split"
+
+vim.opt.showtabline = 0
