@@ -7,7 +7,7 @@
 - ≤ 40ms startup time thanks to lazy-loading
 - No distro
 - Essentials only, with [Mason](https://github.com/mason-org/mason.nvim) as a convenience
-- Stable: uses semantic versioning to allow PATCH updates only
+- Stable: uses fixed versions as much as possible
 - Collaboration ready ([gh](https://github.com/folke/snacks.nvim/blob/main/docs/gh.md) from [Snacks](https://github.com/folke/snacks.nvim) + [openingh.nvim](https://github.com/Almo7aya/openingh.nvim))
 - Compatible with a VS Code environment
 - AI not included

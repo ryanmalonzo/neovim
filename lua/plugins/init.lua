@@ -9,7 +9,7 @@ require("zpack").setup({
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    sem_version = "~1.11.0",
+    version = "v1.11.0",
     priority = 1000,
     cond = not vim.g.vscode,
     config = function()
@@ -31,7 +31,7 @@ require("zpack").setup({
 
   {
     "folke/snacks.nvim",
-    sem_version = "~2.30.0",
+    version = "v2.30.0",
     priority = 1000,
     lazy = false,
     cond = not vim.g.vscode,
@@ -101,7 +101,7 @@ require("zpack").setup({
 
   {
     "nvim-treesitter/nvim-treesitter",
-    sem_version = "~0.10.0",
+    lazy = false,
     build = ":TSUpdate",
     cond = not vim.g.vscode,
     config = function()
@@ -147,7 +147,7 @@ require("zpack").setup({
 
   {
     "nvim-treesitter/nvim-treesitter-context",
-    sem_version = "~1.0.0",
+    version = "v1.0.0",
     cond = not vim.g.vscode,
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     config = function()
@@ -157,7 +157,7 @@ require("zpack").setup({
 
   {
     "mason-org/mason.nvim",
-    sem_version = "~2.2.1",
+    version = "v2.2.1",
     cond = not vim.g.vscode,
     config = function()
       require("mason").setup()
@@ -166,7 +166,7 @@ require("zpack").setup({
 
   {
     "mason-org/mason-lspconfig.nvim",
-    sem_version = "~2.1.0",
+    version = "v2.1.0",
     dependencies = { "mason-org/mason.nvim" },
     cond = not vim.g.vscode,
     config = function()
@@ -205,7 +205,7 @@ require("zpack").setup({
 
   {
     "neovim/nvim-lspconfig",
-    sem_version = "~2.5.0",
+    version = "v2.6.0",
     dependencies = {
       "mason-org/mason.nvim",
       "mason-org/mason-lspconfig.nvim",
@@ -220,7 +220,7 @@ require("zpack").setup({
 
   {
     "lewis6991/gitsigns.nvim",
-    sem_version = "~2.0.0",
+    version = "v2.0.0",
     event = { "BufReadPre", "BufNewFile" },
     cond = not vim.g.vscode,
     config = function()
@@ -248,7 +248,7 @@ require("zpack").setup({
 
   {
     "numToStr/Comment.nvim",
-    sem_version = "~0.8.0",
+    version = "v0.8.0",
     keys = {
       { "gc", mode = { "n", "v" } },
       { "gcc", mode = "n" },
@@ -270,7 +270,7 @@ require("zpack").setup({
 
   {
     "saghen/blink.cmp",
-    sem_version = "~1.8.0",
+    version = "v1.9.1",
     dependencies = { { "rafamadriz/friendly-snippets", version = "572f5660cf05f8cd8834e096d7b4c921ba18e175" } },
     event = { "InsertEnter", "CmdlineEnter" },
     cond = not vim.g.vscode,
@@ -304,7 +304,7 @@ require("zpack").setup({
 
   {
     "stevearc/oil.nvim",
-    sem_version = "~2.15.0",
+    version = "v2.15.0",
     dependencies = { { "nvim-mini/mini.icons", version = "v0.17.0" } },
     lazy = false,
     cond = not vim.g.vscode,
@@ -342,7 +342,7 @@ require("zpack").setup({
 
   {
     "stevearc/conform.nvim",
-    sem_version = "~9.1.0",
+    version = "v9.1.0",
     event = { "BufReadPre", "BufNewFile" },
     cond = not vim.g.vscode,
     config = function()
@@ -413,7 +413,7 @@ require("zpack").setup({
 
   {
     "Almo7aya/openingh.nvim",
-    sem_version = "~1.0.14",
+    version = "v1.0.14",
     keys = {
       { "<leader>gh", "<cmd>OpenInGHFile<cr>", desc = "Open file in GitHub" },
       { "<leader>gh", ":OpenInGHFileLines<CR>", mode = "v", desc = "Open file with lines in GitHub" },
@@ -422,7 +422,7 @@ require("zpack").setup({
 
   {
     "kylechui/nvim-surround",
-    sem_version = "~3.1.8",
+    version = "v4.0.2",
     event = "VeryLazy",
     cond = not vim.g.vscode,
     config = function()
@@ -460,7 +460,7 @@ require("zpack").setup({
 
   {
     "coder/claudecode.nvim",
-    sem_version = "~0.3.0",
+    version = "v0.3.0",
     dependencies = { "folke/snacks.nvim" },
     cond = not vim.g.vscode,
     keys = {
@@ -491,6 +491,7 @@ require("zpack").setup({
 
   {
     "mrjones2014/smart-splits.nvim",
+    version = "v2.0.5",
     cond = not vim.g.vscode,
     lazy = false,
   },
