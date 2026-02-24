@@ -53,9 +53,9 @@ require("zpack").setup({
       {
         "<leader>ff",
         function()
-          Snacks.picker.files()
+          Snacks.picker.smart()
         end,
-        desc = "Find Files",
+        desc = "Smart Find Files",
       },
       {
         "<leader>fw",
