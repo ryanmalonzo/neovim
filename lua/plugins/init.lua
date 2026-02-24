@@ -20,9 +20,6 @@ require("zpack").setup({
           transparent = true,
         },
         integrations = {
-          telescope = {
-            enabled = true,
-          },
           gitsigns = true,
           mason = true,
           treesitter = true,
@@ -52,6 +49,34 @@ require("zpack").setup({
           Snacks.picker.gh_pr({ state = "all" })
         end,
         desc = "GitHub PRs (all)",
+      },
+      {
+        "<leader>ff",
+        function()
+          Snacks.picker.files()
+        end,
+        desc = "Find Files",
+      },
+      {
+        "<leader>fw",
+        function()
+          Snacks.picker.grep()
+        end,
+        desc = "Live Grep",
+      },
+      {
+        "<leader>fb",
+        function()
+          Snacks.picker.buffers()
+        end,
+        desc = "Buffers",
+      },
+      {
+        "<leader>fh",
+        function()
+          Snacks.picker.help()
+        end,
+        desc = "Help Tags",
       },
     },
     config = function()
@@ -191,20 +216,6 @@ require("zpack").setup({
     config = function()
       require("plugins.lsp")
     end,
-  },
-
-  {
-    "nvim-telescope/telescope.nvim",
-    sem_version = "~0.2.1",
-    cmd = "Telescope",
-    dependencies = { { "nvim-lua/plenary.nvim", version = "v0.1.4" } },
-    cond = not vim.g.vscode,
-    keys = {
-      { "<leader>ff", "<cmd>Telescope find_files<cr>" },
-      { "<leader>fw", "<cmd>Telescope live_grep<cr>" },
-      { "<leader>fb", "<cmd>Telescope buffers<cr>" },
-      { "<leader>fh", "<cmd>Telescope help_tags<cr>" },
-    },
   },
 
   {
