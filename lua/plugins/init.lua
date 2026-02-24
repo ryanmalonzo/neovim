@@ -440,4 +440,10 @@ require("zpack").setup({
       vim.diagnostic.config({ virtual_text = false })
     end,
   },
+
+  {
+    "tpope/vim-obsession",
+    version = "ed9dfc7c2cc917ace8b24f4f9f80a91e05614b63",
+    cond = not vim.g.vscode,
+  },
 })
