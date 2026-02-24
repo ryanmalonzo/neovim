@@ -491,7 +491,6 @@ require("zpack").setup({
 
   {
     "mrjones2014/smart-splits.nvim",
-    version = "v2.0.5",
     cond = not vim.g.vscode,
     lazy = false,
   },
