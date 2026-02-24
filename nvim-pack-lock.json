@@ -115,6 +115,11 @@
       "src": "https://github.com/tpope/vim-obsession",
       "version": "'ed9dfc7c2cc917ace8b24f4f9f80a91e05614b63'"
     },
+    "vim-tmux-navigator": {
+      "rev": "85b8e5f60c1690cde57dbb66467ce39cd1b63343",
+      "src": "https://github.com/christoomey/vim-tmux-navigator",
+      "version": "'v1.0'"
+    },
     "zpack.nvim": {
       "rev": "1cf8b96595408d9fb5f645f8f3b3c822b0dbea03",
       "src": "https://github.com/zuqini/zpack.nvim",
