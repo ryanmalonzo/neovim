@@ -100,6 +100,10 @@
       "src": "https://github.com/Almo7aya/openingh.nvim",
       "version": "1.0.14 - 1.1.0"
     },
+    "smart-splits.nvim": {
+      "rev": "23f1e57d5af462c69e988642c020430449a7b1b0",
+      "src": "https://github.com/mrjones2014/smart-splits.nvim"
+    },
     "snacks.nvim": {
       "rev": "fe7cfe9800a182274d0f868a74b7263b8c0c020b",
       "src": "https://github.com/folke/snacks.nvim",
@@ -114,11 +118,6 @@
       "rev": "ed9dfc7c2cc917ace8b24f4f9f80a91e05614b63",
       "src": "https://github.com/tpope/vim-obsession",
       "version": "'ed9dfc7c2cc917ace8b24f4f9f80a91e05614b63'"
-    },
-    "vim-tmux-navigator": {
-      "rev": "85b8e5f60c1690cde57dbb66467ce39cd1b63343",
-      "src": "https://github.com/christoomey/vim-tmux-navigator",
-      "version": "'v1.0'"
     },
     "zpack.nvim": {
       "rev": "1cf8b96595408d9fb5f645f8f3b3c822b0dbea03",
