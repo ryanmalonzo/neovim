@@ -14,7 +14,7 @@
 
 ## Prerequisites
 
-- `git`, `gh`, `lazygit`, `ripgrep`
+- `git`, `gh`, `lazygit`, `ripgrep`, `tmux`
 - Node.js (for Mason LSP/formatters)
 - Rust toolchain (for [blink.cmp](https://github.com/saghen/blink.cmp) build)
 - Nerd Font (optional, for icons)
