@@ -182,19 +182,22 @@ require("zpack").setup({
     dependencies = { "mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim" },
     cond = not vim.g.vscode,
     config = function()
+      local tools = {
+        "biome",
+        "eslint",
+        "eslint_d",
+        "lua_ls",
+        "prettierd",
+        "prisma-language-server",
+        "stylua",
+        "vtsls",
+        "terraformls",
+      }
+      if vim.fn.executable("nix") == 1 then
+        table.insert(tools, "nil_ls")
+      end
       require("mason-tool-installer").setup({
-        ensure_installed = {
-          "biome",
-          "eslint",
-          "eslint_d",
-          "lua_ls",
-          "prettierd",
-          "prisma-language-server",
-          "stylua",
-          "vtsls",
-          "nil_ls",
-          "terraformls",
-        },
+        ensure_installed = tools,
         run_on_start = true,
         integrations = {
           ["mason-lspconfig"] = true,
