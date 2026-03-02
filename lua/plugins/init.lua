@@ -494,7 +494,7 @@ require("zpack").setup({
 
   {
     "mrjones2014/smart-splits.nvim",
-    cond = not vim.g.vscode,
+    cond = not vim.g.vscode and vim.fn.executable("tmux") == 1,
     lazy = false,
   },
 })

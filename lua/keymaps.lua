@@ -35,20 +35,21 @@ vim.keymap.set("n", "<C-v>", function()
 end, { desc = "Paste from clipboard (replace buffer)" })
 
 -- smart-splits.nvim
-
--- resizing splits
-vim.keymap.set({ "n", "t" }, "<A-h>", require("smart-splits").resize_left)
-vim.keymap.set({ "n", "t" }, "<A-j>", require("smart-splits").resize_down)
-vim.keymap.set({ "n", "t" }, "<A-k>", require("smart-splits").resize_up)
-vim.keymap.set({ "n", "t" }, "<A-l>", require("smart-splits").resize_right)
--- moving between splits
-vim.keymap.set({ "n", "t" }, "<C-h>", require("smart-splits").move_cursor_left)
-vim.keymap.set({ "n", "t" }, "<C-j>", require("smart-splits").move_cursor_down)
-vim.keymap.set({ "n", "t" }, "<C-k>", require("smart-splits").move_cursor_up)
-vim.keymap.set({ "n", "t" }, "<C-l>", require("smart-splits").move_cursor_right)
-vim.keymap.set({ "n", "t" }, "<C-\\>", require("smart-splits").move_cursor_previous)
--- swapping buffers between windows
-vim.keymap.set({ "n", "t" }, "<leader><leader>h", require("smart-splits").swap_buf_left)
-vim.keymap.set({ "n", "t" }, "<leader><leader>j", require("smart-splits").swap_buf_down)
-vim.keymap.set({ "n", "t" }, "<leader><leader>k", require("smart-splits").swap_buf_up)
-vim.keymap.set({ "n", "t" }, "<leader><leader>l", require("smart-splits").swap_buf_right)
+if vim.fn.executable("tmux") == 1 then
+  -- resizing splits
+  vim.keymap.set({ "n", "t" }, "<A-h>", require("smart-splits").resize_left)
+  vim.keymap.set({ "n", "t" }, "<A-j>", require("smart-splits").resize_down)
+  vim.keymap.set({ "n", "t" }, "<A-k>", require("smart-splits").resize_up)
+  vim.keymap.set({ "n", "t" }, "<A-l>", require("smart-splits").resize_right)
+  -- moving between splits
+  vim.keymap.set({ "n", "t" }, "<C-h>", require("smart-splits").move_cursor_left)
+  vim.keymap.set({ "n", "t" }, "<C-j>", require("smart-splits").move_cursor_down)
+  vim.keymap.set({ "n", "t" }, "<C-k>", require("smart-splits").move_cursor_up)
+  vim.keymap.set({ "n", "t" }, "<C-l>", require("smart-splits").move_cursor_right)
+  vim.keymap.set({ "n", "t" }, "<C-\\>", require("smart-splits").move_cursor_previous)
+  -- swapping buffers between windows
+  vim.keymap.set({ "n", "t" }, "<leader><leader>h", require("smart-splits").swap_buf_left)
+  vim.keymap.set({ "n", "t" }, "<leader><leader>j", require("smart-splits").swap_buf_down)
+  vim.keymap.set({ "n", "t" }, "<leader><leader>k", require("smart-splits").swap_buf_up)
+  vim.keymap.set({ "n", "t" }, "<leader><leader>l", require("smart-splits").swap_buf_right)
+end
