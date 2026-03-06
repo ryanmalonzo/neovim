@@ -463,7 +463,7 @@ require("zpack").setup({
 
   {
     "coder/claudecode.nvim",
-    version = "v0.3.0",
+    branch = "main",
     dependencies = { "folke/snacks.nvim" },
     cond = not vim.g.vscode,
     keys = {

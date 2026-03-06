@@ -16,9 +16,9 @@
       "version": "'v1.11.0'"
     },
     "claudecode.nvim": {
-      "rev": "2e6ea6f2a63cdf4fd3c05e6a054151d46848d319",
+      "rev": "432121f0f5b9bda041030d1e9e83b7ba3a93dd8f",
       "src": "https://github.com/coder/claudecode.nvim",
-      "version": "'v0.3.0'"
+      "version": "'main'"
     },
     "conform.nvim": {
       "rev": "3543d000dafbc41cc7761d860cfdb24e82154f75",
