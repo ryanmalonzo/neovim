@@ -386,6 +386,7 @@ require("zpack").setup({
 				},
 				formatters = {
 					biome = {
+						args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
 						cwd = require("conform.util").root_file({
 							"biome.json",
 							"biome.jsonc",
