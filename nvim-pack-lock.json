@@ -89,6 +89,11 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-context",
       "version": "'v1.0.0'"
     },
+    "nvim-ts-autotag": {
+      "rev": "8e1c0a389f20bf7f5b0dd0e00306c1247bda2595",
+      "src": "https://github.com/windwp/nvim-ts-autotag",
+      "version": "'8e1c0a389f20bf7f5b0dd0e00306c1247bda2595'"
+    },
     "oil.nvim": {
       "rev": "975a77cce3c8cb742bc1b3629f4328f5ca977dad",
       "src": "https://github.com/stevearc/oil.nvim",
