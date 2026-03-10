@@ -88,7 +88,7 @@ require("zpack").setup({
 				dashboard = { enabled = false },
 				explorer = { enabled = false },
 				indent = { enabled = false },
-				input = { enabled = false },
+				input = { enabled = true },
 				notifier = { enabled = false },
 				quickfile = { enabled = false },
 				scope = { enabled = false },
@@ -422,6 +422,36 @@ require("zpack").setup({
 		keys = {
 			{ "<leader>gh", "<cmd>OpenInGHFile<cr>", desc = "Open file in GitHub" },
 			{ "<leader>gh", ":OpenInGHFileLines<CR>", mode = "v", desc = "Open file with lines in GitHub" },
+		},
+	},
+
+	{
+		"nickjvandyke/opencode.nvim",
+		version = "*",
+		lazy = false,
+		cond = not vim.g.vscode,
+		dependencies = {
+			{
+				"folke/snacks.nvim",
+				optional = true,
+				opts = {
+					input = {},
+					picker = {
+						actions = {
+							opencode_send = function(...)
+								return require("opencode").snacks_picker_send(...)
+							end,
+						},
+						win = {
+							input = {
+								keys = {
+									["<a-a>"] = { "opencode_send", mode = { "n", "i" } },
+								},
+							},
+						},
+					},
+				},
+			},
 		},
 	},
 

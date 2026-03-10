@@ -34,6 +34,43 @@ vim.keymap.set("n", "<C-v>", function()
   vim.notify("Buffer replaced from clipboard", vim.log.levels.INFO)
 end, { desc = "Paste from clipboard (replace buffer)" })
 
+-- opencode.nvim
+vim.keymap.set({ "n", "x" }, "<leader>oa", function()
+  require("opencode").ask("@this: ", { submit = true })
+end, { desc = "Ask opencode" })
+
+vim.keymap.set({ "n", "x" }, "<leader>ox", function()
+  require("opencode").select()
+end, { desc = "Opencode actions" })
+
+vim.keymap.set({ "n", "t" }, "<leader>oo", function()
+  require("opencode").toggle()
+end, { desc = "Toggle opencode" })
+
+vim.keymap.set({ "n", "x" }, "<leader>ov", function()
+  return require("opencode").operator("@this ")
+end, { desc = "Add range to opencode", expr = true })
+
+vim.keymap.set("n", "<leader>ol", function()
+  return require("opencode").operator("@this ") .. "_"
+end, { desc = "Add line to opencode", expr = true })
+
+vim.keymap.set("n", "<leader>ob", function()
+  require("opencode").prompt("@buffer")
+end, { desc = "Add buffer to opencode" })
+
+vim.api.nvim_create_autocmd({ "BufEnter", "WinEnter" }, {
+  callback = function(args)
+    if vim.bo[args.buf].buftype ~= "terminal" then
+      return
+    end
+    local name = vim.api.nvim_buf_get_name(args.buf)
+    if name:match("opencode%s+%-%-port") then
+      vim.cmd.startinsert()
+    end
+  end,
+})
+
 -- smart-splits.nvim
 if vim.fn.executable("tmux") == 1 then
   -- resizing splits

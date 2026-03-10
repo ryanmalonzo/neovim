@@ -94,6 +94,11 @@
       "src": "https://github.com/stevearc/oil.nvim",
       "version": "'v2.15.0'"
     },
+    "opencode.nvim": {
+      "rev": "47f92ab676bf1c3d00a40100429c7b089f81a5fc",
+      "src": "https://github.com/nickjvandyke/opencode.nvim",
+      "version": "'*'"
+    },
     "openingh.nvim": {
       "rev": "0f1a90e70edacf8caace89bb80acd7eddc6234a6",
       "src": "https://github.com/Almo7aya/openingh.nvim",

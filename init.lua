@@ -6,6 +6,8 @@ vim.g.loaded_netrwPlugin = 1
 require("plugins")
 require("keymaps")
 
+require("config.opencode").setup()
+
 vim.opt.number = true
 
 vim.opt.ignorecase = true
@@ -34,7 +36,7 @@ vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
 vim.schedule(function()
-  vim.opt.clipboard = "unnamedplus"
+	vim.opt.clipboard = "unnamedplus"
 end)
 
 vim.opt.mouse = "a"
