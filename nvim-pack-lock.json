@@ -113,6 +113,11 @@
       "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim",
       "version": "'ecce93ff7db4461e942c03e0fcc64bd785df4057'"
     },
+    "tsc.nvim": {
+      "rev": "e083bcf1e54bc3af7df92b33235efb334e8c782c",
+      "src": "https://github.com/dmmulroy/tsc.nvim",
+      "version": "'v2.10.1'"
+    },
     "vim-obsession": {
       "rev": "ed9dfc7c2cc917ace8b24f4f9f80a91e05614b63",
       "src": "https://github.com/tpope/vim-obsession",

@@ -499,4 +499,13 @@ require("zpack").setup({
 		cond = not vim.g.vscode and vim.fn.executable("tmux") == 1,
 		lazy = false,
 	},
+
+	{
+		"dmmulroy/tsc.nvim",
+		version = "v2.10.1",
+		cond = not vim.g.vscode,
+		config = function()
+			require("tsc").setup()
+		end,
+	},
 })
