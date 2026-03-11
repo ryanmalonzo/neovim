@@ -95,9 +95,9 @@
       "version": "'v2.15.0'"
     },
     "opencode.nvim": {
-      "rev": "47f92ab676bf1c3d00a40100429c7b089f81a5fc",
+      "rev": "1088ee70dd997d785a1757d351c07407f0abfc9f",
       "src": "https://github.com/nickjvandyke/opencode.nvim",
-      "version": "'*'"
+      "version": "'v0.5.2'"
     },
     "openingh.nvim": {
       "rev": "0f1a90e70edacf8caace89bb80acd7eddc6234a6",
