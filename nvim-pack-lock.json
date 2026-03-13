@@ -99,6 +99,10 @@
       "src": "https://github.com/Almo7aya/openingh.nvim",
       "version": "'v1.0.14'"
     },
+    "sidekick.nvim": {
+      "rev": "c2bdf8cfcd87a6be5f8b84322c1b5052e78e302e",
+      "src": "https://github.com/folke/sidekick.nvim"
+    },
     "smart-splits.nvim": {
       "rev": "25bf40abf79720ebfa98e09259b7c42942055f4c",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
