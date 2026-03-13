@@ -506,6 +506,7 @@ require("zpack").setup({
   {
     "folke/sidekick.nvim",
     cond = not vim.g.vscode,
+    enabled = true,
     keys = {
       {
         "<leader>aa",

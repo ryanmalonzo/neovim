@@ -10,11 +10,12 @@
 - Stable: uses fixed versions as much as possible
 - Collaboration ready ([gh](https://github.com/folke/snacks.nvim/blob/main/docs/gh.md) from [Snacks](https://github.com/folke/snacks.nvim) + [openingh.nvim](https://github.com/Almo7aya/openingh.nvim))
 - Compatible with a VS Code environment
-- AI not included
+- Tailored for TypeScript (I'm a TypeScript SWE)
+- AI included (disable `sidekick.nvim` [here](https://github.com/ryanmalonzo/neovim/blob/8b89d4d2b9c3755e9cab8dbb0db638317fcdc8dd/lua/plugins/init.lua#L509-L509) if you don't want it)
 
 ## Prerequisites
 
 - `git`, `gh`, `lazygit`, `ripgrep`, `tmux` (optional)
-- Node.js (for Mason LSP/formatters)
+- Node.js (for LSPs and formatters installed via Mason)
 - Rust toolchain (for [blink.cmp](https://github.com/saghen/blink.cmp) build)
 - Nerd Font (optional, for icons)
