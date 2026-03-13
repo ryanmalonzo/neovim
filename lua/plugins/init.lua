@@ -205,7 +205,7 @@ require("zpack").setup({
         "prettierd",
         "prisma-language-server",
         "stylua",
-        "vtsls",
+        "tsgo",
         "terraformls",
         "tailwindcss",
       }

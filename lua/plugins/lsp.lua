@@ -24,15 +24,7 @@ vim.lsp.config("lua_ls", {
   },
 })
 
-vim.lsp.config("vtsls", {
-  settings = {
-    typescript = {
-      tsserver = {
-        maxTsServerMemory = 8192,
-      },
-    },
-  },
-})
+vim.lsp.enable("tsgo")
 
 vim.lsp.config("nil_ls", {
   settings = {
