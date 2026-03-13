@@ -10,11 +10,6 @@
       "src": "https://github.com/saghen/blink.cmp",
       "version": "'v1.9.1'"
     },
-    "catppuccin": {
-      "rev": "cb5665990a797b102715188e73c44c3931b3b42e",
-      "src": "https://github.com/catppuccin/nvim",
-      "version": "'v1.11.0'"
-    },
     "conform.nvim": {
       "rev": "3543d000dafbc41cc7761d860cfdb24e82154f75",
       "src": "https://github.com/stevearc/conform.nvim",
@@ -76,7 +71,7 @@
       "version": "'v4.0.2'"
     },
     "nvim-treesitter": {
-      "rev": "5cb05e1b0fa3c469958a2b26f36b3fe930af221c",
+      "rev": "493890b87a81dfe6a7e577dbc364ae33fa482da9",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-context": {
@@ -99,12 +94,17 @@
       "src": "https://github.com/Almo7aya/openingh.nvim",
       "version": "'v1.0.14'"
     },
+    "rose-pine": {
+      "rev": "f01eac6eedf6197509dde8b66de0263207ee1877",
+      "src": "https://github.com/rose-pine/neovim",
+      "version": "'v3.0.2'"
+    },
     "sidekick.nvim": {
       "rev": "c2bdf8cfcd87a6be5f8b84322c1b5052e78e302e",
       "src": "https://github.com/folke/sidekick.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "25bf40abf79720ebfa98e09259b7c42942055f4c",
+      "rev": "82d01bb71bc051955654b3af68355f783d872fe0",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "snacks.nvim": {

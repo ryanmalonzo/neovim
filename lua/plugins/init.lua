@@ -7,25 +7,19 @@ vim.pack.add({
 
 require("zpack").setup({
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    version = "v1.11.0",
+    "rose-pine/neovim",
+    name = "rose-pine",
+    version = "v3.0.2",
     priority = 1000,
     cond = not vim.g.vscode,
     config = function()
-      require("catppuccin").setup({
-        flavour = "mocha",
-        transparent_background = true,
-        float = {
-          transparent = true,
-        },
-        integrations = {
-          gitsigns = true,
-          mason = true,
-          treesitter = true,
+      require("rose-pine").setup({
+        variant = "moon",
+        styles = {
+          transparency = true,
         },
       })
-      vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("rose-pine")
     end,
   },
 
