@@ -15,11 +15,6 @@
       "src": "https://github.com/catppuccin/nvim",
       "version": "'v1.11.0'"
     },
-    "claudecode.nvim": {
-      "rev": "432121f0f5b9bda041030d1e9e83b7ba3a93dd8f",
-      "src": "https://github.com/coder/claudecode.nvim",
-      "version": "'main'"
-    },
     "conform.nvim": {
       "rev": "3543d000dafbc41cc7761d860cfdb24e82154f75",
       "src": "https://github.com/stevearc/conform.nvim",
