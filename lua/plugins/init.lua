@@ -65,18 +65,39 @@ require("zpack").setup({
         desc = "Live Grep",
       },
       {
-        "<leader>fb",
+        "<leader>fr",
         function()
-          Snacks.picker.buffers()
+          Snacks.picker.recent()
         end,
-        desc = "Buffers",
+        desc = "Recent Files",
       },
       {
-        "<leader>fh",
+        "<leader>fd",
         function()
-          Snacks.picker.help()
+          Snacks.picker.diagnostics()
         end,
-        desc = "Help Tags",
+        desc = "Diagnostics",
+      },
+      {
+        "<leader>fs",
+        function()
+          Snacks.picker.lsp_symbols()
+        end,
+        desc = "LSP Symbols",
+      },
+      {
+        "<leader>fS",
+        function()
+          Snacks.picker.lsp_workspace_symbols()
+        end,
+        desc = "LSP Workspace Symbols",
+      },
+      {
+        "<leader>gs",
+        function()
+          Snacks.picker.git_status()
+        end,
+        desc = "Git Status",
       },
     },
     config = function()
