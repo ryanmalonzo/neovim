@@ -87,7 +87,7 @@ require("zpack").setup({
         desc = "LSP Workspace Symbols",
       },
       {
-        "<leader>gs",
+        "<leader>fg",
         function()
           Snacks.picker.git_status()
         end,
