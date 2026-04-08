@@ -1,45 +1,89 @@
-vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(args)
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
-    if client then
-      client.server_capabilities.semanticTokensProvider = nil
-    end
+local mason_tools = {
+    "biome",
+    "eslint",
+    "eslint_d",
+    "lua_ls",
+    "prettierd",
+    "prisma-language-server",
+    "stylua",
+    "terraformls",
+    "tailwindcss",
+}
 
-    local opts = { buffer = args.buf }
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-    vim.keymap.set("n", "gra", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "grn", vim.lsp.buf.rename, opts)
-    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-  end,
-})
-
-vim.lsp.config("lua_ls", {
-  settings = {
-    Lua = {
-      diagnostics = { globals = { "vim" } },
-    },
-  },
-})
+if vim.fn.executable("nix") == 1 then
+    table.insert(mason_tools, "nil_ls")
+end
 
 vim.lsp.config("vtsls", {
-  settings = {
-    typescript = {
-      tsserver = {
-        maxTsServerMemory = 8192,
-      },
+    settings = {
+        typescript = {
+            tsserver = {
+                maxTsServerMemory = 8192,
+            },
+        },
     },
-  },
 })
 
 vim.lsp.config("nil_ls", {
-  settings = {
-    ["nil"] = {
-      formatting = {
-        command = { "nixfmt" },
-      },
+    settings = {
+        ["nil"] = {
+            formatting = {
+                command = { "nixfmt" },
+            },
+        },
     },
-  },
 })
+
+return {
+    {
+        "mason-org/mason.nvim",
+        version = "v2.2.1",
+        cond = not vim.g.vscode,
+        config = function()
+            require("mason").setup()
+        end,
+    },
+
+    {
+        "mason-org/mason-lspconfig.nvim",
+        version = "v2.1.0",
+        dependencies = { "mason-org/mason.nvim" },
+        cond = not vim.g.vscode,
+        config = function()
+            require("mason-lspconfig").setup({
+                automatic_enable = true,
+            })
+        end,
+    },
+
+    {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        commit = "517ef5994ef9d6b738322664d5fdd948f0fdeb46",
+        dependencies = { "mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim" },
+        cond = not vim.g.vscode,
+        config = function()
+            require("mason-tool-installer").setup({
+                ensure_installed = mason_tools,
+                run_on_start = true,
+                integrations = {
+                    ["mason-lspconfig"] = true,
+                },
+            })
+        end,
+    },
+
+    {
+        "neovim/nvim-lspconfig",
+        version = "v2.6.0",
+        dependencies = {
+            "mason-org/mason.nvim",
+            "mason-org/mason-lspconfig.nvim",
+            "WhoIsSethDaniel/mason-tool-installer.nvim",
+        },
+        event = { "BufReadPre", "BufNewFile" },
+        cond = not vim.g.vscode,
+        config = function()
+            require("config.lsp")
+        end,
+    },
+}
