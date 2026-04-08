@@ -11,7 +11,7 @@
 - Collaboration ready ([gh](https://github.com/folke/snacks.nvim/blob/main/docs/gh.md) from [Snacks](https://github.com/folke/snacks.nvim) + [openingh.nvim](https://github.com/Almo7aya/openingh.nvim))
 - Compatible with a VS Code environment
 - Tailored for TypeScript (I'm a TypeScript SWE)
-- AI included (disable `sidekick.nvim` [here](https://github.com/ryanmalonzo/neovim/blob/8b89d4d2b9c3755e9cab8dbb0db638317fcdc8dd/lua/plugins/init.lua#L509-L509) if you don't want it)
+- AI included (disable `sidekick.nvim` in [`lua/plugins/ai.lua`](./lua/plugins/ai.lua) if you don't want it)
 
 ## Prerequisites
 
