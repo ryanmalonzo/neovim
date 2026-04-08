@@ -89,6 +89,27 @@ return {
   },
 
   {
+    "nvim-neotest/neotest",
+    cmd = "Neotest",
+    cond = not vim.g.vscode,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-neotest/nvim-nio",
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-neotest/neotest-jest",
+      "marilari88/neotest-vitest",
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-jest")({}),
+          require("neotest-vitest"),
+        },
+      })
+    end,
+  },
+
+  {
     "windwp/nvim-ts-autotag",
     version = "8e1c0a389f20bf7f5b0dd0e00306c1247bda2595",
     cond = not vim.g.vscode,

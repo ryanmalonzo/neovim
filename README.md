@@ -11,6 +11,7 @@
 - Collaboration ready ([gh](https://github.com/folke/snacks.nvim/blob/main/docs/gh.md) from [Snacks](https://github.com/folke/snacks.nvim) + [openingh.nvim](https://github.com/Almo7aya/openingh.nvim))
 - Compatible with a VS Code environment
 - Tailored for TypeScript (I'm a TypeScript SWE)
+- Test runner support via [neotest](https://github.com/nvim-neotest/neotest) with Jest and Vitest adapters
 - AI included (disable `sidekick.nvim` in [`lua/plugins/ai.lua`](./lua/plugins/ai.lua) if you don't want it)
 
 ## Prerequisites
