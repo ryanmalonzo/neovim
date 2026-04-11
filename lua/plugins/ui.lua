@@ -11,6 +11,7 @@ local treesitter_parsers = {
   "json",
   "html",
   "css",
+  "yaml",
 }
 
 local treesitter_filetypes = {
@@ -25,6 +26,7 @@ local treesitter_filetypes = {
   "json",
   "html",
   "css",
+  "yaml",
 }
 
 return {
