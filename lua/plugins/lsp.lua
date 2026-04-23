@@ -8,7 +8,6 @@ local mason_tools = {
   "stylua",
   "terraformls",
   "tailwindcss",
-  "vtsls",
 }
 
 if vim.fn.executable("nix") == 1 then

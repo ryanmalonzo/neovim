@@ -16,15 +16,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-vim.lsp.config("vtsls", {
-  settings = {
-    typescript = {
-      tsserver = {
-        maxTsServerMemory = 8192,
-      },
-    },
-  },
-})
+vim.lsp.enable("tsgo")
 
 vim.lsp.config("nil_ls", {
   settings = {
@@ -40,16 +32,6 @@ vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
       diagnostics = { globals = { "vim" } },
-    },
-  },
-})
-
-vim.lsp.config("nil_ls", {
-  settings = {
-    ["nil"] = {
-      formatting = {
-        command = { "nixfmt" },
-      },
     },
   },
 })
