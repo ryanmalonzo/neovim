@@ -32,8 +32,8 @@ return {
   },
 
   {
-    url = "https://codeberg.org/andyg/leap.nvim",
-    commit = "59fd447a103ab078969c81e8586a2241e29ccfea",
+    url = "https://git.disroot.org/andyg/leap.nvim",
+    commit = "156c71aabb68d520c6269db4103c8e5580e3ea67",
     keys = {
       { "s", "<Plug>(leap-forward)", mode = { "n", "x", "o" }, desc = "Leap forward" },
       { "S", "<Plug>(leap-backward)", mode = { "n", "x", "o" }, desc = "Leap backward" },

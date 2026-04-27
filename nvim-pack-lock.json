@@ -36,9 +36,9 @@
       "version": "'84a4987ff36798c2fc1169cbaff67960aed9776f'"
     },
     "leap.nvim": {
-      "rev": "59fd447a103ab078969c81e8586a2241e29ccfea",
-      "src": "https://codeberg.org/andyg/leap.nvim",
-      "version": "'59fd447a103ab078969c81e8586a2241e29ccfea'"
+      "rev": "156c71aabb68d520c6269db4103c8e5580e3ea67",
+      "src": "https://git.disroot.org/andyg/leap.nvim",
+      "version": "'156c71aabb68d520c6269db4103c8e5580e3ea67'"
     },
     "mason-lspconfig.nvim": {
       "rev": "f2fa60409630ec2d24acf84494fb55e1d28d593c",
@@ -125,11 +125,11 @@
       "version": "'v3.0.2'"
     },
     "sidekick.nvim": {
-      "rev": "17447a05f9385e5f8372b61530f6f9329cb82421",
+      "rev": "208e1c5b8170c01fd1d07df0139322a76479b235",
       "src": "https://github.com/folke/sidekick.nvim"
     },
     "smart-splits.nvim": {
-      "rev": "78b9d3bd21fe479690ae5e08a1bf3602698466d8",
+      "rev": "033a1ff747652dfa27bfbe90e0844b5cb59a741f",
       "src": "https://github.com/mrjones2014/smart-splits.nvim"
     },
     "snacks.nvim": {
