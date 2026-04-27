@@ -33,6 +33,7 @@ vim.schedule(function()
 end)
 
 opt.mouse = "a"
+
 opt.showmode = false
+
 opt.inccommand = "split"
-opt.showtabline = 0
