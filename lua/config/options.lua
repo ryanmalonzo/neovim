@@ -37,3 +37,5 @@ opt.mouse = "a"
 opt.showmode = false
 
 opt.inccommand = "split"
+
+vim.cmd.colorscheme("habamax")
