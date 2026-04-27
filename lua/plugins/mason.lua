@@ -1,4 +1,4 @@
-local mason_tools = {
+local tools = {
   "biome",
   "eslint",
   "eslint_d",
@@ -11,7 +11,7 @@ local mason_tools = {
 }
 
 if vim.fn.executable("nix") == 1 then
-  table.insert(mason_tools, "nil_ls")
+  table.insert(tools, "nil_ls")
 end
 
 return {
@@ -43,27 +43,12 @@ return {
     cond = not vim.g.vscode,
     config = function()
       require("mason-tool-installer").setup({
-        ensure_installed = mason_tools,
+        ensure_installed = tools,
         run_on_start = true,
         integrations = {
           ["mason-lspconfig"] = true,
         },
       })
-    end,
-  },
-
-  {
-    "neovim/nvim-lspconfig",
-    version = "v2.6.0",
-    dependencies = {
-      "mason-org/mason.nvim",
-      "mason-org/mason-lspconfig.nvim",
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
-    },
-    event = { "BufReadPre", "BufNewFile" },
-    cond = not vim.g.vscode,
-    config = function()
-      require("config.lsp")
     end,
   },
 }

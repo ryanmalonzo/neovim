@@ -5,19 +5,14 @@ vim.pack.add({
     },
 })
 
-local spec_modules = {
-    "plugins.ui",
-    "plugins.editor",
-    "plugins.lsp",
-    "plugins.coding",
-    "plugins.git",
-    "plugins.ai",
-}
-
 local specs = {}
+local plugin_dir = vim.fn.stdpath("config") .. "/lua/plugins"
 
-for _, spec_module in ipairs(spec_modules) do
-    vim.list_extend(specs, require(spec_module))
+for _, file in ipairs(vim.fn.glob(plugin_dir .. "/*.lua", false, true)) do
+    local name = vim.fn.fnamemodify(file, ":t:r")
+    if name ~= "init" then
+        vim.list_extend(specs, require("plugins." .. name))
+    end
 end
 
 require("zpack").setup(specs)
