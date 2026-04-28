@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
     if vim.o.background == "light" then
       vim.cmd.colorscheme("catppuccin-latte")
     else
-      vim.cmd.colorscheme("kanagawa-dragon")
+      vim.cmd.colorscheme("catppuccin-mocha")
     end
   end,
 })
