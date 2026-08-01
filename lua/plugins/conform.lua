@@ -7,10 +7,10 @@ return {
     ---@type conform.setupOpts
     opts = {
       formatters_by_ft = {
-        jsx = { "prettierd" },
         javascript = { "prettierd" },
-        tsx = { "prettierd" },
+        javascriptreact = { "prettierd" },
         typescript = { "prettierd" },
+        typescriptreact = { "prettierd" },
       },
       default_format_opts = {
         lsp_format = "fallback",
