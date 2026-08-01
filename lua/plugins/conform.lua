@@ -7,13 +7,14 @@ return {
     ---@type conform.setupOpts
     opts = {
       formatters_by_ft = {
-        javascript = { "prettierd" },
-        javascriptreact = { "prettierd" },
-        typescript = { "prettierd" },
-        typescriptreact = { "prettierd" },
+        javascript = { "eslint_d", "prettierd" },
+        javascriptreact = { "eslint_d", "prettierd" },
+        typescript = { "eslint_d", "prettierd" },
+        typescriptreact = { "eslint_d", "prettierd" },
       },
-      default_format_opts = {
+      format_on_save = {
         lsp_format = "fallback",
+        timeout_ms = 500,
       },
     },
     init = function()
@@ -29,5 +30,5 @@ return {
         require("conform").format({ async = true, lsp_format = "fallback", range = range })
       end, { range = true })
     end,
-  }
+  },
 }
