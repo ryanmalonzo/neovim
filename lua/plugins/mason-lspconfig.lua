@@ -2,7 +2,12 @@ return {
   {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "lua_ls", "tsgo" },
+      ensure_installed = {
+        "lua_ls",
+        "prettierd",
+        "stylua",
+        "tsgo",
+      },
     },
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
