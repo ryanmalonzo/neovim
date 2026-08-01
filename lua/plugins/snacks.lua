@@ -43,6 +43,7 @@ return {
           pick = nil,
           ---@type snacks.dashboard.Item[]
           keys = {
+            { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
             { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
             {
               icon = " ",
