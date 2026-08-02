@@ -14,6 +14,16 @@ return {
         "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
         desc = "Buffer Diagnostics (Trouble)",
       },
+      {
+        "<leader>cr",
+        "<cmd>Trouble lsp_references toggle focus=false<cr>",
+        desc = "LSP References (Trouble)",
+      },
+      {
+        "<leader>cs",
+        "<cmd>Trouble symbols toggle focus=false<cr>",
+        desc = "Symbols (Trouble)",
+      },
     },
   },
 }
