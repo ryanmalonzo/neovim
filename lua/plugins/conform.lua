@@ -9,6 +9,7 @@ return {
       formatters_by_ft = {
         javascript = { "eslint_d", "prettierd" },
         javascriptreact = { "eslint_d", "prettierd" },
+        lua = { "stylua" },
         typescript = { "eslint_d", "prettierd" },
         typescriptreact = { "eslint_d", "prettierd" },
       },
