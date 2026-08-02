@@ -1,6 +1,7 @@
 return {
   {
     "https://codeberg.org/mfussenegger/nvim-lint",
+    event = "BufWritePre",
     config = function()
       local lint = require("lint")
 
