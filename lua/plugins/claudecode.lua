@@ -1,17 +1,7 @@
 return {
   {
     "coder/claudecode.nvim",
-    cmd = {
-      "ClaudeCodeAdd",
-      "ClaudeCodeSend",
-      "ClaudeCodeTreeAdd",
-      "ClaudeCodeStatus",
-      "ClaudeCodeStart",
-      "ClaudeCodeStop",
-      "ClaudeCodeDiffAccept",
-      "ClaudeCodeDiffDeny",
-      "ClaudeCodeCloseAllDiffs",
-    },
+    lazy = false,
     keys = {
       { "<leader>a", nil, desc = "AI/Claude Code" },
       { "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
