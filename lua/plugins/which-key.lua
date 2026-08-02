@@ -2,8 +2,7 @@ return {
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
-    opts = {
-    },
+    opts = {},
     keys = {
       {
         "<leader>?",
@@ -13,5 +12,5 @@ return {
         desc = "Buffer Local Keymaps (which-key)",
       },
     },
-  }
+  },
 }

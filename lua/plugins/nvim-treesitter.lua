@@ -4,7 +4,7 @@ return {
     lazy = false,
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter").install {
+      require("nvim-treesitter").install({
         "css",
         "dockerfile",
         "html",
@@ -20,7 +20,7 @@ return {
         "tsx",
         "typescript",
         "yaml",
-      }
+      })
     end,
-  }
+  },
 }
