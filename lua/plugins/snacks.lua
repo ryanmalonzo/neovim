@@ -254,21 +254,6 @@ return {
         desc = "Visual selection or word",
         mode = { "n", "x" },
       },
-      -- search
-      {
-        "<leader>sd",
-        function()
-          Snacks.picker.diagnostics()
-        end,
-        desc = "Diagnostics",
-      },
-      {
-        "<leader>sD",
-        function()
-          Snacks.picker.diagnostics_buffer()
-        end,
-        desc = "Buffer Diagnostics",
-      },
       -- LSP
       {
         "gd",
