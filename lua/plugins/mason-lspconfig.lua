@@ -6,6 +6,7 @@ return {
         "eslint",
         "lua_ls",
         "tsgo",
+        "yamlls",
       },
     },
     dependencies = {
