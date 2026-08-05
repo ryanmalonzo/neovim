@@ -31,3 +31,5 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 vim.opt.cmdheight = 0
+
+vim.diagnostic.config({ virtual_lines = true })
