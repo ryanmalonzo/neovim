@@ -44,7 +44,14 @@ return {
           ---@type snacks.dashboard.Item[]
           keys = {
             { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-            { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+            {
+              icon = " ",
+              key = "r",
+              desc = "Recent Files",
+              action = function()
+                Snacks.picker.recent({ filter = { cwd = true } })
+              end,
+            },
             {
               icon = " ",
               key = "c",
