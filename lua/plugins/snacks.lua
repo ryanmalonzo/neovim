@@ -255,21 +255,21 @@ return {
       },
       -- LSP
       {
-        "gd",
+        "grd",
         function()
           Snacks.picker.lsp_definitions()
         end,
         desc = "Goto Definition",
       },
       {
-        "gD",
+        "grD",
         function()
           Snacks.picker.lsp_declarations()
         end,
         desc = "Goto Declaration",
       },
       {
-        "gr",
+        "grr",
         function()
           Snacks.picker.lsp_references()
         end,
@@ -277,32 +277,53 @@ return {
         desc = "References",
       },
       {
-        "gI",
+        "gri",
         function()
           Snacks.picker.lsp_implementations()
         end,
         desc = "Goto Implementation",
       },
       {
-        "gy",
+        "gry",
         function()
           Snacks.picker.lsp_type_definitions()
         end,
         desc = "Goto T[y]pe Definition",
       },
       {
-        "<leader>ss",
+        "grs",
         function()
           Snacks.picker.lsp_symbols()
         end,
         desc = "LSP Symbols",
       },
       {
-        "<leader>sS",
+        "grS",
         function()
           Snacks.picker.lsp_workspace_symbols()
         end,
         desc = "LSP Workspace Symbols",
+      },
+      {
+        "grf",
+        function()
+          vim.lsp.buf.format({ async = true })
+        end,
+        desc = "Format",
+      },
+      {
+        "]d",
+        function()
+          vim.diagnostic.jump({ count = 1, float = true })
+        end,
+        desc = "Next Diagnostic",
+      },
+      {
+        "[d",
+        function()
+          vim.diagnostic.jump({ count = -1, float = true })
+        end,
+        desc = "Previous Diagnostic",
       },
     },
   },
