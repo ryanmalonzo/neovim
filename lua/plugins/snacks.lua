@@ -98,9 +98,9 @@ return {
       {
         "<leader><space>",
         function()
-          Snacks.picker.smart()
+          Snacks.picker.files()
         end,
-        desc = "Smart Find Files",
+        desc = "Find Files",
       },
       {
         "<leader>,",
@@ -151,13 +151,6 @@ return {
           Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
         end,
         desc = "Find Config File",
-      },
-      {
-        "<leader>ff",
-        function()
-          Snacks.picker.files()
-        end,
-        desc = "Find Files",
       },
       {
         "<leader>fg",
