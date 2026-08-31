@@ -162,9 +162,9 @@ return {
       {
         "<leader>fg",
         function()
-          Snacks.picker.git_files()
+          Snacks.picker.git_status()
         end,
-        desc = "Find Git Files",
+        desc = "Find Modified Files",
       },
       {
         "<leader>fp",
@@ -201,13 +201,6 @@ return {
           Snacks.picker.git_log_line()
         end,
         desc = "Git Log Line",
-      },
-      {
-        "<leader>gs",
-        function()
-          Snacks.picker.git_status()
-        end,
-        desc = "Git Status",
       },
       {
         "<leader>gS",
