@@ -5,7 +5,7 @@ return {
       ensure_installed = {
         "eslint",
         "lua_ls",
-        "tsgo",
+        "tsc",
         "yamlls",
       },
     },
