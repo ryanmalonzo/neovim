@@ -7,7 +7,15 @@ return {
     opts = {
       explorer = { enabled = true },
       indent = { enabled = true },
-      picker = { enabled = true },
+      picker = {
+        enabled = true,
+        hidden = true,
+        ignored = true,
+        exclude = { "node_modules" },
+        sources = {
+          files = { hidden = true, ignored = true },
+        },
+      },
       quickfile = { enabled = true },
       dashboard = {
         enabled = true,
