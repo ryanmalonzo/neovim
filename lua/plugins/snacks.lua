@@ -11,7 +11,7 @@ return {
         enabled = true,
         hidden = true,
         ignored = true,
-        exclude = { "node_modules" },
+        exclude = { "build", "node_modules" },
         sources = {
           files = { hidden = true, ignored = true },
         },
